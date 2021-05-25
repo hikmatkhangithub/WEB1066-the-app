@@ -37,7 +37,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
+//import javax.annotation.api;
 import java.io.IOException;
 import java.util.*;
 
@@ -103,7 +103,7 @@ public class DataGenerator {
     private MongoTemplate mongoOperations;
 
     @ManagedOperation
-    @PostConstruct
+    // @PostConstruct
     @Scheduled(fixedRate = 5000)
     public void initializeDatabase() throws IOException {
         cleanCollections();

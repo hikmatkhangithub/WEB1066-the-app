@@ -108,7 +108,7 @@ test {
 
 
 task uiTest(type: Test) {
-    testClassesDir = sourceSets.uitest.output.classesDir
+    testClassesDirs = sourceSets.uitest.output.classesDirs
     classpath = sourceSets.uitest.runtimeClasspath
 
     reports {

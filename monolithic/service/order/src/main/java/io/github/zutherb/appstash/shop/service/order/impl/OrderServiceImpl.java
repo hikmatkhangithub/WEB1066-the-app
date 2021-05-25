@@ -21,7 +21,7 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
+// import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -61,7 +61,7 @@ public class OrderServiceImpl extends AbstractServiceImpl<OrderInfo, Order> impl
         this.userService = userService;
     }
 
-    @PostConstruct
+    // @PostConstruct
     public void initSuppliers() throws IOException {
         suppliers = supplierCsvReader.parseCsv();
     }
