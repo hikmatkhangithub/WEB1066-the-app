@@ -1,4 +1,10 @@
 language: java
 jdk: oraclejdk11
 
-echo "Testing coming soon..."
+script: 
+  - echo "Testing coming soon..."
+  - echo $TRAVIS_COMMIT
+  - echo $TRAVIS_TAG
+  - echo $TRAVIS_BRANCH
+  - echo $TRAVIS_BUILD_NUMBER
+  - echo $TRAVIS_REPO_SLUG
