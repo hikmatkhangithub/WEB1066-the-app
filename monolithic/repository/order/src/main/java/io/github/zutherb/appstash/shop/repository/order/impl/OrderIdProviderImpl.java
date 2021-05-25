@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
+// import javax.annotation.PostConstruct;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
@@ -36,7 +36,7 @@ public class OrderIdProviderImpl implements OrderIdProvider {
         return mongoOperations.findOne(query, OrderSequence.class).getNextVal();
     }
 
-    @PostConstruct
+    // @PostConstruct
     public void init() {
         Query query = query(where("id").is(ORDER_SEQUENCE_ID));
         if (mongoOperations.findOne(query, OrderSequence.class) == null) {
